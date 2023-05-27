@@ -11,31 +11,59 @@
     <div class="wrapper">
       <div class="formWrapper">
         <div id="day" class="day">
-          <p>Day</p>
-          <input type="text" placeholder="DD" maxlength="2" id="dayInput"/>
+          <p>DAY</p>
+          <input
+            type="text"
+            placeholder="DD"
+            maxlength="2"
+            id="dayInput"
+            onkeypress="isInputNumber(event)"
+          />
           <p id="dayError" class="error">Day must be valid!</p>
         </div>
         <div id="month" class="month">
-          <p>Month</p>
-          <input type="text" placeholder="MM" maxlength="2" id="monthInput"/>
+          <p>MONTH</p>
+          <input
+            type="text"
+            placeholder="MM"
+            maxlength="2"
+            id="monthInput"
+            onkeypress="isInputNumber(event)"
+          />
           <p id="monthError" class="error">Month must be valid!</p>
         </div>
         <div id="year" class="year">
-          <p>Year</p>
-          <input type="text" placeholder="YY" maxlength="4" id="yearInput"/>
+          <p>YEAR</p>
+          <input
+            type="text"
+            placeholder="YY"
+            maxlength="4"
+            id="yearInput"
+            onkeypress="isInputNumber(event)"
+          />
           <p id="yearError" class="error">Year must be Valid</p>
         </div>
       </div>
       <div class="errorWrapper">
-        <button class="submitButton" id="submit"><img src="./assets/images/icon-arrow.svg" /></button>
+        <button class="submitButton" id="submit">
+          <img src="./assets/images/icon-arrow.svg" />
+        </button>
       </div>
-      <br><br>
-      <hr>
+      <br /><br />
+      <hr />
       <div class="birthdayContent">
-        <!-- add code here -->
-        <div class="content"><p id="days" class="cc">--</p><p class="calculator"> Days</p></div>
-        <div class="content"><p id="months" class="cc">--</p><p class="calculator"> Months</p></div>
-        <div class="content"><p id="years" class="cc">--</p><p class="calculator"> Years</p></div>
+        <div class="content">
+          <p id="years" class="cc">--</p>
+          <p class="calculator">&nbsp;Years</p>
+        </div>
+        <div class="content">
+          <p id="months" class="cc">--</p>
+          <p class="calculator">&nbsp;Months</p>
+        </div>
+        <div class="content">
+          <p id="days" class="cc">--</p>
+          <p class="calculator">&nbsp;Days</p>
+        </div>
       </div>
     </div>
     <script src="index.js"></script>

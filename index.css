@@ -19,6 +19,11 @@
   src: url("./assets/fonts/Poppins-ExtraBold.ttf");
   src: url("./assets/fonts/Poppins-ExtraBoldItalic.ttf");
 }
+#dayError,
+#monthError,
+#yearError {
+  display: none;
+}
 
 body {
   font-family: "Poppins";
@@ -60,18 +65,25 @@ hr {
 input {
   width: 120px;
   height: 50px;
-  border: none;
+  border: 1px solid var(--OffWhite);
   background-color: var(--OffWhite);
   border-radius: 5px;
   font-size: 36px;
   font-style: bold;
   color: var(--OffBlack);
-  border: 1px solid var(--lightGray);
   margin-right: 20px;
 }
 
-input, select, textarea, button {
-  font-family:inherit;
+input:focus {
+  border-color: var(--Purple);
+  outline: none;
+}
+
+input,
+select,
+textarea,
+button {
+  font-family: inherit;
 }
 
 .errorWrapper {
@@ -82,7 +94,6 @@ input, select, textarea, button {
 .error {
   color: var(--LightRed);
   background-color: var(--White);
-  display: none;
   text-align: left;
   font-size: 10px;
 }
@@ -97,6 +108,10 @@ input, select, textarea, button {
   height: 5rem;
   width: 5rem;
   cursor: pointer;
+}
+
+.submitButton:hover {
+  background-color: var(--OffBlack);
 }
 
 .birthdayContent {
@@ -118,4 +133,3 @@ input, select, textarea, button {
 .calculator {
   color: var(--OffBlack);
 }
-
