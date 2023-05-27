@@ -39,17 +39,16 @@ hr {
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 10px;
-  width: 800px;
+  width: 780px;
   border-radius: 25px;
   border-bottom-right-radius: 100px;
-  height: 500px;
+  height: 600px;
 }
 
 .formWrapper {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  /* line-height: 0; */
 }
 
 .day .month .year {
@@ -82,21 +81,16 @@ input, select, textarea, button {
 
 .error {
   color: var(--LightRed);
-  border: 1px solid var(--LightRed);
   background-color: var(--White);
-  /* display: none; */
+  display: none;
   text-align: left;
   font-size: 10px;
-}
-
-#dayError {
-  /* margin-left: 90px; */
 }
 
 .submitButton {
   position: absolute;
   left: 700px;
-  top: 110px;
+  top: 165px;
   background-color: var(--Purple);
   border-radius: 50%;
   border: none;
