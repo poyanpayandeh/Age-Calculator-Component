@@ -19,7 +19,9 @@
   src: url("./assets/fonts/Poppins-ExtraBold.ttf");
   src: url("./assets/fonts/Poppins-ExtraBoldItalic.ttf");
 }
-#dayError, #monthError, #yearError {
+#dayError,
+#monthError,
+#yearError {
   display: none;
 }
 
@@ -63,18 +65,25 @@ hr {
 input {
   width: 120px;
   height: 50px;
-  border: none;
+  border: 1px solid var(--OffWhite);
   background-color: var(--OffWhite);
   border-radius: 5px;
   font-size: 36px;
   font-style: bold;
   color: var(--OffBlack);
-  border: 1px solid var(--lightGray);
   margin-right: 20px;
 }
 
-input, select, textarea, button {
-  font-family:inherit;
+input:focus {
+  border-color: var(--Purple);
+  outline: none;
+}
+
+input,
+select,
+textarea,
+button {
+  font-family: inherit;
 }
 
 .errorWrapper {
@@ -101,6 +110,10 @@ input, select, textarea, button {
   cursor: pointer;
 }
 
+.submitButton:hover {
+  background-color: var(--OffBlack);
+}
+
 .birthdayContent {
   display: flex;
   flex-direction: column;
@@ -120,4 +133,3 @@ input, select, textarea, button {
 .calculator {
   color: var(--OffBlack);
 }
-
