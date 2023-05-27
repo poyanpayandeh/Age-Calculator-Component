@@ -28,20 +28,23 @@ body {
 
 /* Center wrapper div */
 .wrapper {
+  border: 5px solid;
   position: absolute;
-  width: 1000px;
-  height: 700px;
-  z-index: 15;
-  top: 30%;
-  left: 45%;
-  margin: -100px 0 0 -150px;
-  /* background-color: brown; */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  width: 800px;
+  border-radius: 25px;
+  border-bottom-right-radius: 100px;
+  height: 500px;
 }
 
 .formWrapper {
   display: flex;
   align-items: center;
   justify-content: center;
+  line-height: 0;
 }
 
 .day .month .year {
@@ -60,8 +63,36 @@ input {
   font-style: bold;
   color: var(--OffBlack);
   border: 1px solid var(--lightGray);
+  margin-right: 20px;
+}
+
+input, select, textarea, button {
+  font-family:inherit;
 }
 
 .errorWrapper {
   display: flex;
+  justify-content: center;
+}
+
+.error {
+  color: var(--LightRed);
+  border: 1px solid var(--LightRed);
+  background-color: var(--White);
+  margin-right: 20px;
+  display: none;
+}
+
+#dayError {
+  margin-left: 90px;
+}
+
+.submitButton {
+  position: absolute;
+  left: 700px;
+  background-color: var(--Purple);
+  border-radius: 50%;
+  border: none;
+  height: 5rem;
+  width: 5rem;
 }
