@@ -22,4 +22,46 @@
 
 body {
   font-family: "Poppins";
+  color: var(--SmokeyGrayy);
+  font-size: 15px;
+}
+
+/* Center wrapper div */
+.wrapper {
+  position: absolute;
+  width: 1000px;
+  height: 700px;
+  z-index: 15;
+  top: 30%;
+  left: 45%;
+  margin: -100px 0 0 -150px;
+  /* background-color: brown; */
+}
+
+.formWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.day .month .year {
+  display: flex;
+  flex-direction: column;
+  color: var(--lightGray);
+}
+
+input {
+  width: 120px;
+  height: 50px;
+  border: none;
+  background-color: var(--OffWhite);
+  border-radius: 5px;
+  font-size: 36px;
+  font-style: bold;
+  color: var(--OffBlack);
+  border: 1px solid var(--lightGray);
+}
+
+.errorWrapper {
+  display: flex;
 }
