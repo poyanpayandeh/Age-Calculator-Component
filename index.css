@@ -19,6 +19,9 @@
   src: url("./assets/fonts/Poppins-ExtraBold.ttf");
   src: url("./assets/fonts/Poppins-ExtraBoldItalic.ttf");
 }
+#dayError, #monthError, #yearError {
+  display: none;
+}
 
 body {
   font-family: "Poppins";
@@ -82,7 +85,6 @@ input, select, textarea, button {
 .error {
   color: var(--LightRed);
   background-color: var(--White);
-  display: none;
   text-align: left;
   font-size: 10px;
 }
