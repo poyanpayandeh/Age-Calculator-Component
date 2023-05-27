@@ -12,17 +12,35 @@
       <div class="formWrapper">
         <div id="day" class="day">
           <p>DAY</p>
-          <input type="text" placeholder="DD" maxlength="2" id="dayInput" />
+          <input
+            type="text"
+            placeholder="DD"
+            maxlength="2"
+            id="dayInput"
+            onkeypress="isInputNumber(event)"
+          />
           <p id="dayError" class="error">Day must be valid!</p>
         </div>
         <div id="month" class="month">
           <p>MONTH</p>
-          <input type="text" placeholder="MM" maxlength="2" id="monthInput" />
+          <input
+            type="text"
+            placeholder="MM"
+            maxlength="2"
+            id="monthInput"
+            onkeypress="isInputNumber(event)"
+          />
           <p id="monthError" class="error">Month must be valid!</p>
         </div>
         <div id="year" class="year">
           <p>YEAR</p>
-          <input type="text" placeholder="YY" maxlength="4" id="yearInput" />
+          <input
+            type="text"
+            placeholder="YY"
+            maxlength="4"
+            id="yearInput"
+            onkeypress="isInputNumber(event)"
+          />
           <p id="yearError" class="error">Year must be Valid</p>
         </div>
       </div>

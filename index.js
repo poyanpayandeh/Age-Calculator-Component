@@ -8,6 +8,14 @@ console.log(`${currentDay} ${currentMonth} ${currentYear}`);
 // event listen for button
 document.getElementById("submit").addEventListener("click", submit);
 
+// function to only allow digits to be entered into text input
+function isInputNumber(e) {
+  let ch = String.fromCharCode(e.which);
+  if (!/[0-9]/.test(ch)) {
+    e.preventDefault();
+  }
+}
+
 function submit() {
   // get elements to be shown
   let days = document.getElementById("days");
@@ -159,6 +167,13 @@ function clearError(day, month, year) {
   let dayInput = document.getElementById("dayInput");
   let monthInput = document.getElementById("monthInput");
   let yearInput = document.getElementById("yearInput");
+  let dayLabel = document.getElementById("day");
+  let monthLabel = document.getElementById("month");
+  let yearLabel = document.getElementById("year");
+
+  dayLabel.style.color = "var(--SmokeyGrayy)";
+  monthLabel.style.color = "var(--SmokeyGrayy)";
+  yearLabel.style.color = "var(--SmokeyGrayy)";
 
   dayInput.style.border = "1px solid var(--lightGray)";
   monthInput.style.border = "1px solid var(--lightGray)";
