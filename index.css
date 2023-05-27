@@ -95,4 +95,16 @@ input, select, textarea, button {
   border: none;
   height: 5rem;
   width: 5rem;
+  cursor: pointer;
 }
+
+.birthdayContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+}
+
