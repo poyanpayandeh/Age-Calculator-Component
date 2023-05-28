@@ -76,9 +76,13 @@ function checkValidInput(day, month, year) {
   let isMonthValid = false;
   let isYearValid = false;
 
-  if (month >= 1 && month <= 12) {
-    const maxDays = daysInMonth[month];
-    if (day >= 1 && day <= maxDays) {
+  const parsedDay = parseInt(day, 10); // Convert day to a number
+  const parsedMonth = parseInt(month, 10); // Convert month to a number
+  const parsedYear = parseInt(year, 10); // Convert year to a number
+
+  if (parsedMonth >= 1 && parsedMonth <= 12) {
+    const maxDays = daysInMonth[parsedMonth];
+    if (parsedDay >= 1 && parsedDay <= maxDays) {
       // Valid day
       isDayValid = true;
     } else {
@@ -99,7 +103,7 @@ function checkValidInput(day, month, year) {
   }
 
   const currentYear = new Date().getFullYear();
-  if (year <= currentYear) {
+  if (parsedYear <= currentYear) {
     // Valid year
     isYearValid = true;
   } else {
