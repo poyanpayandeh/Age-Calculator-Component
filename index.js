@@ -217,11 +217,10 @@ function calculateAge(birthDay, birthMonth, birthYear) {
     ageYears--;
     if (currentMonth < birthMonth) {
       ageMonths = 12 - birthMonth + currentMonth;
-    } else if (currentDay < birthDay) {
-      ageMonths = 11;
     } else {
       ageMonths = 0;
     }
+
     const daysInPreviousMonth = new Date(
       currentYear,
       currentMonth - 1,
@@ -237,10 +236,23 @@ function calculateAge(birthDay, birthMonth, birthYear) {
       ).getDate();
       ageDays += previousMonthDays;
     }
+  } else if (currentDay < birthDay) {
+    const daysInPreviousMonth = new Date(
+      currentYear,
+      currentMonth - 1,
+      0
+    ).getDate();
+    ageMonths--;
+    ageDays = daysInPreviousMonth - birthDay + currentDay;
   }
 
   // Adjust for leap year
-  if (birthMonth === 2 && birthDay === 29 && !leapyear(birthYear)) {
+  if (
+    birthMonth === 2 &&
+    birthDay === 29 &&
+    !leapyear(birthYear) &&
+    ageYears > 0
+  ) {
     ageYears--;
     ageMonths = 11;
     ageDays = new Date(currentYear, currentMonth - 1, 0).getDate();
