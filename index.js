@@ -230,8 +230,20 @@ function calculateAge(birthDay, birthMonth, birthYear) {
     ageDays = daysInPreviousMonth - birthDay + currentDay;
     if (ageDays < 0) {
       ageMonths--;
-      ageDays += new Date(currentYear, currentMonth - 2, 0).getDate();
+      const previousMonthDays = new Date(
+        currentYear,
+        currentMonth - 2,
+        0
+      ).getDate();
+      ageDays += previousMonthDays;
     }
+  }
+
+  // Adjust for leap year
+  if (birthMonth === 2 && birthDay === 29 && !leapyear(birthYear)) {
+    ageYears--;
+    ageMonths = 11;
+    ageDays = new Date(currentYear, currentMonth - 1, 0).getDate();
   }
 
   // Update HTML elements
