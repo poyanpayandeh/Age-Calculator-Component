@@ -220,7 +220,7 @@ function calculateAge(birthDay, birthMonth, birthYear) {
     } else if (currentDay < birthDay) {
       ageMonths = 11;
     } else {
-      ageMonths = 12;
+      ageMonths = 0;
     }
     const daysInPreviousMonth = new Date(
       currentYear,
@@ -228,6 +228,10 @@ function calculateAge(birthDay, birthMonth, birthYear) {
       0
     ).getDate();
     ageDays = daysInPreviousMonth - birthDay + currentDay;
+    if (ageDays < 0) {
+      ageMonths--;
+      ageDays += new Date(currentYear, currentMonth - 2, 0).getDate();
+    }
   }
 
   // Update HTML elements
