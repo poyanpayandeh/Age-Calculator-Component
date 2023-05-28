@@ -218,18 +218,14 @@ function calculateAge(birthDay, birthMonth, birthYear) {
     if (currentMonth < birthMonth) {
       ageMonths = 12 - birthMonth + currentMonth;
     } else {
-      ageMonths = 11; // 11 months as the birth month is the current month
+      ageMonths = 11 - (birthMonth - currentMonth);
     }
-    if (currentDay < birthDay) {
-      const daysInPreviousMonth = new Date(
-        currentYear,
-        currentMonth - 1,
-        0
-      ).getDate();
-      ageDays = daysInPreviousMonth - birthDay + currentDay;
-    } else {
-      ageDays = 30; // 30 days as the birth day is the current day
-    }
+    const daysInPreviousMonth = new Date(
+      currentYear,
+      currentMonth - 1,
+      0
+    ).getDate();
+    ageDays = daysInPreviousMonth - birthDay + currentDay;
   }
 
   // Update HTML elements
