@@ -217,8 +217,10 @@ function calculateAge(birthDay, birthMonth, birthYear) {
     ageYears--;
     if (currentMonth < birthMonth) {
       ageMonths = 12 - birthMonth + currentMonth;
+    } else if (currentDay < birthDay) {
+      ageMonths = 11;
     } else {
-      ageMonths = 11 - (birthMonth - currentMonth);
+      ageMonths = 12;
     }
     const daysInPreviousMonth = new Date(
       currentYear,
