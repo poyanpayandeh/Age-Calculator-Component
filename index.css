@@ -47,6 +47,7 @@ hr {
   border-radius: 25px;
   border-bottom-right-radius: 100px;
   height: 600px;
+  background-color: var(--OffWhite);
 }
 
 .formWrapper {
