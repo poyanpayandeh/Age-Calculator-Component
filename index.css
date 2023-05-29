@@ -29,6 +29,7 @@ body {
   font-family: "Poppins";
   color: var(--SmokeyGrayy);
   font-size: 15px;
+  background-color: var(--OffWhite);
 }
 
 hr {
@@ -47,7 +48,7 @@ hr {
   border-radius: 25px;
   border-bottom-right-radius: 100px;
   height: 600px;
-  background-color: var(--OffWhite);
+  background-color: var(--White);
 }
 
 .formWrapper {
