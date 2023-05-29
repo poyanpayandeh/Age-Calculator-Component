@@ -29,7 +29,7 @@ body {
   font-family: "Poppins";
   color: var(--SmokeyGrayy);
   font-size: 15px;
-  background-color: var(--OffWhite);
+  background-color: var(--lightGray);
 }
 
 hr {
